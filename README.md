@@ -38,6 +38,9 @@ b) COLUMN-MAJOR ORDER SET-The elements in the column-major order are arranged co
 ## 2. FUNCTION-A function is a set of statements that takes input, does some specific computation, and produces output. The idea is to put some commonly or repeatedly done tasks together to make a function so that instead of writing the same code again and again for different inputs, we can call this function.
 
 for example-
+![Screenshot 2024-01-27 111109](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/9a15bb05-b1e7-480f-bcc5-09e884abcccf)
+
+# PARAMETER PASSING TECHNIQUES
 
 
 
