@@ -41,8 +41,14 @@ for example-
 ![Screenshot 2024-01-27 111109](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/9a15bb05-b1e7-480f-bcc5-09e884abcccf)
 
 # PARAMETER PASSING TECHNIQUES
+![Screenshot 2024-01-27 115934](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/9d516a52-b36f-43ec-86a3-758d41e82a61)
 
+## 3.scope of a variable 
 
+The scope of a variable is the region of the program in which variable is declared and used.Scope is generally divided into two categories:
+
+1.Static Scope- if a variable's scope is a certain function, then its scope is the program text of the function definition:within that that text,the variable name exists, and is bound to its variable ,but outside that text ,the variable does not exist.
+2.Dynamic Scope-while the function is running, the variable name exists, and is bound to its variable,but after the function returns ,the variable name does not exist.
 
 
 
