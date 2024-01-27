@@ -22,6 +22,9 @@ CASE2 :array indices starting from 0
 let the 2D array be arr[m][n] of type int
 
 let &arr be “address”
+![Screenshot 2024-01-27 113422](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/0efa0d22-2135-4d03-82df-5316f8c0d5e0)
+
+## case 1 may look user-friendly but case 2 is more efficient. That’s why most languages like C++, PYTHON, JAVA use arrays starting with index 0 and rarely languages like Lua arrays starting with index 1.
 
 
 
