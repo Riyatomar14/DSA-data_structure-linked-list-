@@ -9,9 +9,9 @@ for example-
 
 ![Screenshot 2024-01-27 111128](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/23993811-751a-4ebf-bcd5-cd0c562fd7b7)
 
-## remember -  “Location of next index depends on the data type we use”.
+# remember -  “Location of next index depends on the data type we use”.
 
-## Note- why indexes start with 0 ?
+# Note- why indexes start with 0 ?
 
 Because as it save the subtraction (operation) cost and hence some time.It is a more efficient way. 
 
@@ -24,7 +24,16 @@ let the 2D array be arr[m][n] of type int
 let &arr be “address”
 ![Screenshot 2024-01-27 113422](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/0efa0d22-2135-4d03-82df-5316f8c0d5e0)
 
-## case 1 may look user-friendly but case 2 is more efficient. That’s why most languages like C++, PYTHON, JAVA use arrays starting with index 0 and rarely languages like Lua arrays starting with index 1.
+# case 1 may look user-friendly but case 2 is more efficient. That’s why most languages like C++, PYTHON, JAVA use arrays starting with index 0 and rarely languages like Lua arrays starting with index 1.
+
+## 2. ROW-MAJOR ORDER SET AND COLUMN-MAJOR ORDER SET
+In computing, row-major order and column-major order are methods for storing multidimensional arrays in linear storage such as random access memory.
+
+a) ROW-MAJOR ORDER SET-the elements in row-major order are arranged consecutively along the row.for example-In C (and many other languages like C++, Java etc), 2-D arrays are stored in row-major order.
+
+b) COLUMN-MAJOR ORDER SET-The elements in the column-major order are arranged consecutively along the column. for example- Pascal and Fortran follows column major order.
+
+
 
 
 
