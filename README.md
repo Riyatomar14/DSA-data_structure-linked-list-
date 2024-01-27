@@ -47,8 +47,18 @@ for example-
 
 The scope of a variable is the region of the program in which variable is declared and used.Scope is generally divided into two categories:
 
-1.Static Scope- if a variable's scope is a certain function, then its scope is the program text of the function definition:within that that text,the variable name exists, and is bound to its variable ,but outside that text ,the variable does not exist.
-2.Dynamic Scope-while the function is running, the variable name exists, and is bound to its variable,but after the function returns ,the variable name does not exist.
+1.Static Scope- if a variable's scope is a certain function, then its scope is the program text of the function definition:within that that text,the variable name exists, and is bound to its variable ,but outside that text ,the variable does not exist. for example-
+
+![Screenshot 2024-01-27 120859](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/1c4f2b57-2d9a-47be-b2e5-efaf97fd7b43)
+
+2.Dynamic Scope-while the function is running, the variable name exists, and is bound to its variable,but after the function returns ,the variable name does not exist. for example-
+
+![Screenshot 2024-01-27 120935](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/cda43155-d2fd-4950-a546-48e07b627182)
+
+## int main() function 
+
+
+
 
 
 
