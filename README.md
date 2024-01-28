@@ -29,8 +29,10 @@ let &arr be “address”
 ## 2.POINTERS-
 
 Pointers are symbolic representations of addresses. They enable programs to simulate call-by-reference as well as to create and manipulate dynamic data structures. Iterating over elements in arrays or other data structures is one of the main use of pointers. 
-
 The address of the variable you’re working with is assigned to the pointer variable that points to the same data type (such as an int or string).
+
+![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/0aef3a2a-d99b-42b0-92c2-bce1dcad75d8)
+
 ## 3. ROW-MAJOR ORDER SET AND COLUMN-MAJOR ORDER SET
 In computing, row-major order and column-major order are methods for storing multidimensional arrays in linear storage such as random access memory.
 
