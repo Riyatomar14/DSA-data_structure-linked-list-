@@ -26,7 +26,12 @@ let &arr be “address”
 
 # case 1 may look user-friendly but case 2 is more efficient. That’s why most languages like C++, PYTHON, JAVA use arrays starting with index 0 and rarely languages like Lua arrays starting with index 1.
 
-## 2. ROW-MAJOR ORDER SET AND COLUMN-MAJOR ORDER SET
+## 2.POINTERS-
+
+Pointers are symbolic representations of addresses. They enable programs to simulate call-by-reference as well as to create and manipulate dynamic data structures. Iterating over elements in arrays or other data structures is one of the main use of pointers. 
+
+The address of the variable you’re working with is assigned to the pointer variable that points to the same data type (such as an int or string).
+## 3. ROW-MAJOR ORDER SET AND COLUMN-MAJOR ORDER SET
 In computing, row-major order and column-major order are methods for storing multidimensional arrays in linear storage such as random access memory.
 
 a) ROW-MAJOR ORDER SET-the elements in row-major order are arranged consecutively along the row.for example-In C (and many other languages like C++, Java etc), 2-D arrays are stored in row-major order.
@@ -35,7 +40,7 @@ b) COLUMN-MAJOR ORDER SET-The elements in the column-major order are arranged co
 
 ![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/9618373e-8390-4e60-aafc-8d187fdc123e)
 
-## 2. FUNCTION-A function is a set of statements that takes input, does some specific computation, and produces output. The idea is to put some commonly or repeatedly done tasks together to make a function so that instead of writing the same code again and again for different inputs, we can call this function.
+## 4. FUNCTION-A function is a set of statements that takes input, does some specific computation, and produces output. The idea is to put some commonly or repeatedly done tasks together to make a function so that instead of writing the same code again and again for different inputs, we can call this function.
 
 for example-
 ![Screenshot 2024-01-27 111109](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/9a15bb05-b1e7-480f-bcc5-09e884abcccf)
@@ -43,7 +48,7 @@ for example-
 # PARAMETER PASSING TECHNIQUES
 ![Screenshot 2024-01-27 115934](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/9d516a52-b36f-43ec-86a3-758d41e82a61)
 
-## 3.scope of a variable 
+## 5.scope of a variable 
 
 The scope of a variable is the region of the program in which variable is declared and used.Scope is generally divided into two categories:
 
