@@ -310,5 +310,6 @@ int main()
 
 ## output
 
+![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/da34703e-532a-4fc2-9ea0-182b576705e2)
 
 
