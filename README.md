@@ -135,6 +135,11 @@ int main()
     return 0;
 }
 
+## output
+
+![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/d8ac70d1-ddd7-4b4c-a6a9-53706437fe99)
+
+
 
 
 
