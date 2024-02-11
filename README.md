@@ -104,6 +104,40 @@ void linkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
+//for insert node at the begining
+
+struct Node *insertAtFirst(struct Node *head, int data) {
+    struct Node *ptr = (struct Node *) malloc(sizeof(struct Node));
+    ptr->next = head;
+    ptr->data = data;
+    return ptr;
+}
+struct Node *insertAtIndex(struct Node *head,int data,int index){
+    struct Node *ptr = (struct Node *) malloc(sizeof(struct Node));
+    struct Node *p = head;
+    int i =0;
+    while(i != index-1){
+        ptr = ptr->next;
+        i++;
+    }
+    ptr->data = data;
+    ptr->next = p->next;
+    p->next = ptr;
+    return head;
+}
+// insert node at end
+struct Node *insertAtEnd(struct Node *head, int data) {
+    struct Node *ptr = (struct Node *) malloc(sizeof(struct Node));
+    ptr->data = data;
+    struct Node *p = head;
+    while(p->next != NULL){
+        p = p->next;
+    }
+    p->next = ptr;
+    ptr->next = NULL;
+    return head;
+    
+}
  
 int main()
 {
@@ -130,26 +164,21 @@ int main()
 
     fourth->data = 66;
     fourth->next = NULL;
- 
+    
+    printf("list transversal\n");
     linkedListTraversal(head);
+    
+    printf("list after insert 56 at begining\n");
+    head = insertAtFirst(head,56);
+    linkedListTraversal(head);
+    
+    printf("list after insert 67 at index 1\n");
+    head=insertAtIndex(head,67,1);
+    linkedListTraversal(head);
+    
+    printf("list after insert 99 at end\n");
+    head=insertAtEnd(head,99);
+    linkedListTraversal(head);
+    
     return 0;
 }
-
-## output
-
-![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/d8ac70d1-ddd7-4b4c-a6a9-53706437fe99)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
