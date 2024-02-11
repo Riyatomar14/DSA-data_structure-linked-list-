@@ -68,7 +68,23 @@ The main function serves as the starting point for program execution. It usually
 
 ## linked list 
 
-In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+linked list similar to array. 
+
+In array elements are stored in contiguous memory locations.
+
+But in linked list, elements are stored in  non contiguous memory location.In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+
+## why linked lists ?
+
+Memory and the capacity of an array remains fixed.In case of linked lists , we can kmeep adding and removing elements without any capacity contraints.
+
+## drawbacks of linked lists ?
+
+1. Extra memory space for ponters is required (for every node 1 pointer is needed).
+2. random access not allowed as elements are not stored in contiguous memory locations.
+
+![Screenshot 2024-02-11 103245](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/561fb23a-c9e4-4537-9413-69a1056ce5e8)
+
 
 
 
