@@ -66,6 +66,10 @@ The scope of a variable is the region of the program in which variable is declar
 
 The main function serves as the starting point for program execution. It usually controls program execution by directing the calls to other functions in the program.
 
+## linked list 
+
+In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+
 
 
 
