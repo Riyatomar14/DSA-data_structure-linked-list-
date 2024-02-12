@@ -312,4 +312,14 @@ int main()
 
 ![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/da34703e-532a-4fc2-9ea0-182b576705e2)
 
+## double linkled list
+
+
+## benefit of the doubly linked list 
+
+1.It is help to transverse in the both either forward or backward direction.
+
+## drawbacks-
+
+1.Extra memory is required than the single linked list.
 
