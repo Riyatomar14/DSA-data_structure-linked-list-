@@ -314,10 +314,14 @@ int main()
 
 ## double linkled list
 
+A doubly linked list is a different from as singly linked list in a way that each node has a extra pointer that points to the previous node,together withg next pointer and data similar th singly linked list.
+
 
 ## benefit of the doubly linked list 
 
-1.It is help to transverse in the both either forward or backward direction.
+It is help to transverse in the both either forward or backward direction.
+
+insertion and deletion becomes more efficicent.
 
 ## drawbacks-
 
