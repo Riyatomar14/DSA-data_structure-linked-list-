@@ -419,7 +419,13 @@ struct node *insertnode(struct node *root, int data) {
         return root;
     }
 }
-
+struct node* search(struct node* root, int data) {
+    if (root == NULL || root->data == data)
+        return root;
+    if (root->data < data)
+        return search(root->right, data);
+    return search(root->left, data);
+}
 int main() {
     struct node *p = createnode(4);
     struct node *p1 = createnode(1);
@@ -448,6 +454,13 @@ int main() {
     struct Node *root = NULL;
     insertnode(p,0);
     inorder(p);
-    
+    printf("\n");
+   int searchData = 5;
+    struct node* result = search(p, searchData);
+    if (result != NULL)
+        printf("Node with value %d found in the binary search tree\n", searchData);
+    else
+        printf("Node with value %d not found in the binary search tree\n", searchData);
     return 0;
 }
+
