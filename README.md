@@ -377,16 +377,58 @@ void inorder(struct node* root){
     }
 }
 
+int countleaves(struct node* root) {
+    if (root == NULL)
+    return 0;
+    if (root->right== NULL && root->left== NULL){
+        return 1;
+    } else {
+        return countleaves(root->left) + countleaves(root->right);
+    }
+    
+}
+
+int countinternalleaves(struct node* root){
+    if (root==NULL)
+    return 0;
+    if (root->right==NULL && root->right== NULL){
+        return 0;
+    }
+    else{
+        return 1 + countinternalleaves(root->left) + countinternalleaves(root->right);
+    }
+}
+int height(struct node *root) {
+    if (root == NULL)
+        return 0;
+
+    int leftHeight = height(root->left);
+    int rightHeight = height(root->right);
+
+    
+    return 1 + (leftHeight > rightHeight ? leftHeight : rightHeight);
+}
+struct node *insertnode(struct node *root, int data) {
+    if (root == NULL) {
+        return createnode(data);
+    } else {
+        if (data <= root->data)
+            root->left = insertnode(root->left, data);
+        else
+            root->right = insertnode(root->right, data);
+        return root;
+    }
+}
+
 int main() {
     struct node *p = createnode(4);
     struct node *p1 = createnode(1);
     struct node *p2 = createnode(6);
     struct node *p3 = createnode(5);
     struct node *p4 = createnode(2);
-
     
 
-    // Linking nodes to form a tree
+    // linking 
     p->left = p1;
     p->right = p2;
     p1->right = p4;
@@ -396,7 +438,16 @@ int main() {
     postorder(p);
     printf("\n");
     inorder(p);
+    printf("\n");
+    int leaves = countleaves(p);
+    printf("Number of leaves in the tree: %d\n", leaves);
+    int nonleaves = countinternalleaves(p);
+    printf("Number of non-leaves in the tree: %d\n", nonleaves);
+    int heightoftree = height(p);
+    printf("height of tree: %d\n", heightoftree);
+    struct Node *root = NULL;
+    insertnode(p,0);
+    inorder(p);
+    
     return 0;
 }
-
-
