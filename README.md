@@ -330,8 +330,6 @@ insertion and deletion becomes more efficicent.
 
 ## binary tree
 
-# transverse - 1.preorder
-
 #include <stdio.h>
 #include <stdlib.h> 
 
@@ -408,24 +406,19 @@ int height(struct node *root) {
     
     return 1 + (leftHeight > rightHeight ? leftHeight : rightHeight);
 }
-struct node *insertnode(struct node *root, int data) {
-    if (root == NULL) {
-        return createnode(data);
-    } else {
-        if (data <= root->data)
-            root->left = insertnode(root->left, data);
-        else
-            root->right = insertnode(root->right, data);
+struct node* searchKey(struct node* root, int data) {
+    // Base cases: root is NULL or key is present at root
+    if (root == NULL || root-> data == data)
         return root;
-    }
-}
-struct node* search(struct node* root, int data) {
-    if (root == NULL || root->data == data)
-        return root;
+
+    // Key is greater than root's key, so search in right subtree
     if (root->data < data)
-        return search(root->right, data);
-    return search(root->left, data);
+        return searchKey(root->left, data);
+
+    // Key is smaller than root's key, so search in left subtree
+    return searchKey(root->right, data);
 }
+
 int main() {
     struct node *p = createnode(4);
     struct node *p1 = createnode(1);
@@ -452,15 +445,16 @@ int main() {
     int heightoftree = height(p);
     printf("height of tree: %d\n", heightoftree);
     struct Node *root = NULL;
-    insertnode(p,0);
+    //insertnode(p,0);
     inorder(p);
     printf("\n");
-   int searchData = 5;
-    struct node* result = search(p, searchData);
+   int Data = 5;
+    struct node* result = searchKey(p, Data);
     if (result != NULL)
-        printf("Node with value %d found in the binary search tree\n", searchData);
+        printf("Node with value %d found in the binary search tree\n", Data);
     else
-        printf("Node with value %d not found in the binary search tree\n", searchData);
+        printf("Node with value %d not found in the binary search tree\n", Data);
     return 0;
 }
 
+## output
