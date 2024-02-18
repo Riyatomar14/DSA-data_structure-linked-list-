@@ -1,4 +1,5 @@
 # c-language-important-terms
+### ARRAY-> POINTERS -> STRUCTURE -> LIMKED LIST -> DOUBLE-LINKED LIST -> TREE(BINARY-TREE,AVL-TREE) -> GRAPH
 ## 1.ARRAY-An array is a collection of items of same data type stored at contiguous memory locations. 
 
 for example-
