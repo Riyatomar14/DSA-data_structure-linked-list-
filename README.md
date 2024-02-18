@@ -462,3 +462,9 @@ int main() {
 
 ![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/90514d1b-406a-46ee-b52e-4d81478e134f)
 
+## AVL -TREE(Adelson-Velsky and Landis tree)
+
+almost all the operations of binary search tree are of order 0(h) is a height of the tree. to guarantee an upper bound of 0(log n) foe all these operations,we use balanced trees. 
+
+
+
