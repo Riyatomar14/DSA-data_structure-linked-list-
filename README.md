@@ -458,3 +458,6 @@ int main() {
 }
 
 ## output
+
+![image](https://github.com/Riyatomar14/c-language-important-terms/assets/143107173/90514d1b-406a-46ee-b52e-4d81478e134f)
+
