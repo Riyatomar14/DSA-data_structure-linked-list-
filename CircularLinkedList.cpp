@@ -99,7 +99,26 @@ void deleteNode(int value, Node*& tail) {
     curr->next = NULL;
     delete curr;
 }
-
+void search(int value,Node* tail){
+    if(tail==NULL){
+        cout<<"LINKED LIST IS EMPTY"<<endl;
+    }
+    else{
+        Node*curr = tail;
+        
+        do{
+            if(curr->data==value){
+                cout<<"element is found"<<endl;
+            }
+            else{
+                cout<<"element not found"<<endl;
+            }
+            curr=curr->next;
+ 
+        }while(curr!=tail);
+        
+    }
+}
 int main() {
     Node* tail = NULL;
 
