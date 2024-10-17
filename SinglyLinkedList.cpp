@@ -118,7 +118,36 @@ void reverse(Node* &head, Node* prev, Node* curr) {
     }
 }
 
+void concatenation(Node* &head, Node* &head1) {
+    // If the first list is empty
+    if (head == NULL) {
+        head = head1;
+        return;
+    }
 
+    // Otherwise, traverse to the end of the first list
+    Node* temp = head;
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+    temp->next = head1;
+}
+
+bool compare(Node* &head,Node* &head1){
+    Node* temp1 = head;
+    Node* temp2 = head1;
+    while (temp1!=NULL && temp2!=NULL){
+        if(temp1->data == temp2->data){
+            return true;
+        }
+        temp1=temp1->next;
+        temp2=temp2->next;
+    }
+    if(temp1==NULL && temp2==NULL){
+        return true;
+    }
+    return false;
+}
 int main() {
     // Created new node
     Node* node1 = new Node(10);
@@ -134,16 +163,29 @@ int main() {
     insert_at_tail(14, tail);
     print(head);
 
-    insertion_at_position(100, tail, head, 2);
+    insertion_at_position(100, tail, head, 2);   
     print(head);
     
-    delete_node(2, head);
+    delete_node(1, head);
     print(head);
     
-    //reverse(head);
+    //reverse 
     reverse(head,NULL,head);
     print(head);
-
+    //concatenate 
+    Node* node2 = new Node(50);
+    Node* head1 = node2;
+    concatenation(head,head1);
+    print(head);
+ 
+    //compare
+    print(head);
+    print(head1);
+    if(compare(head,head1)){
+        cout<<"lists are identical "<<endl;
+    }
+    else{
+        cout<<"lists are not identical "<<endl;
+    }
     return 0;
 }
-
