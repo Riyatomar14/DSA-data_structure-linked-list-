@@ -1,4 +1,5 @@
 // singly linked list 
+// singly linked list 
 #include <iostream>
 using namespace std;
 
@@ -148,6 +149,62 @@ bool compare(Node* &head,Node* &head1){
     }
     return false;
 }
+#include <iostream>
+
+
+
+int size(Node* head) {
+    Node* temp = head;
+    int count = 0;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+
+void ARRAYsort(int arr[], int s) {
+    for (int i = 0; i < s; i++) {
+        for (int j = i + 1; j < s; j++) {
+            // Sort in ascending order
+            if (arr[i] > arr[j]) {
+                // Swap elements
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
+
+void sort(Node*& head) {
+    int s = size(head);
+    if (s == 0) return; // Nothing to sort
+
+    // Create an array to hold the linked list elements
+    int* arr = new int[s];
+
+    // Populate the array with linked list data
+    Node* temp = head;
+    for (int i = 0; i < s; i++) {
+        arr[i] = temp->data;
+        temp = temp->next;
+    }
+
+    // Sort the array
+    ARRAYsort(arr, s);
+
+    // Place sorted values back into the linked list
+    temp = head;
+    for (int i = 0; i < s; i++) {
+        temp->data = arr[i];
+        temp = temp->next;
+    }
+
+    // Clean up
+    delete[] arr;
+}
+
 int main() {
     // Created new node
     Node* node1 = new Node(10);
@@ -187,5 +244,7 @@ int main() {
     else{
         cout<<"lists are not identical "<<endl;
     }
+    sort(head);
+    print(head);
     return 0;
 }
