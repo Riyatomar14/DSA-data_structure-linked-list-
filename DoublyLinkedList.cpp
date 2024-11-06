@@ -154,6 +154,41 @@ void delete_node(int pos, Node* &head, Node* &tail) {
     }
 }
 
+// Function to delete all odd-valued nodes
+void deleteOddNodes(Node* &head, Node* &tail) {
+    Node* current = head;
+    while (current != NULL) {
+        Node* nextNode = current->next;
+
+        if (current->data % 2 != 0) {  // Check if the data is odd
+            if (current == head) {  // Deleting head node
+                head = current->next;
+                if (head != NULL) {
+                    head->prev = NULL;
+                } else {
+                    tail = NULL;  // If list becomes empty
+                }
+            } else if (current == tail) {  // Deleting tail node
+                tail = current->prev;
+                if (tail != NULL) {
+                    tail->next = NULL;
+                } else {
+                    head = NULL;  // If list becomes empty
+                }
+            } else {  // Deleting a middle node
+                current->prev->next = current->next;
+                current->next->prev = current->prev;
+            }
+
+            current->next = NULL;
+            current->prev = NULL;
+            delete current;
+        }
+
+        current = nextNode;
+    }
+}
+
 int main() {
     // Initial node
     Node* node1 = new Node(10);
@@ -184,6 +219,11 @@ int main() {
 
     // Deleting the last node
     delete_node(4, head, tail);
+    print(head);
+
+    deleteOddNodes(head, tail);
+
+    cout << "List after deleting odd nodes:" << endl;
     print(head);
 
     return 0;
