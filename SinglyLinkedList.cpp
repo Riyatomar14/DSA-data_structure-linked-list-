@@ -1,5 +1,5 @@
 // singly linked list 
-// singly linked list 
+
 #include <iostream>
 using namespace std;
 
