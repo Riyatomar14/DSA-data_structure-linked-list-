@@ -86,6 +86,11 @@ void delete_node(int pos, Node* &head){
             curr = curr->next;
             count++;
         }
+
+        if (curr == tail) {  // If deleting the tail node
+            tail = prev;
+        }
+
         prev->next = curr->next;
         curr->next = NULL;
         delete curr;
