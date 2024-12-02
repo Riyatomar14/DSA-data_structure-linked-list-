@@ -84,9 +84,6 @@ void deleteNode(int value, Node*& tail) {
         return;
     }
 
-    // Node found, now delete it
-    prev->next = curr->next;
-
     // If there is only one node in the list
     if (curr == prev) {
         tail = NULL;
@@ -95,7 +92,8 @@ void deleteNode(int value, Node*& tail) {
     else if (tail == curr) {
         tail = prev;
     }
-
+     // Node found, now delete it
+    prev->next = curr->next;
     curr->next = NULL;
     delete curr;
 }
