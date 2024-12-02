@@ -97,6 +97,18 @@ void delete_node(int pos, Node* &head){
     }
 }
 
+bool search(int data,node* &head){
+    node*temp=head;
+    while(temp != NULL){
+        if(temp->data=data){
+            return true;
+        }
+        temp=temp->next;
+    }
+    
+    return false;
+}
+
 /* //by loop
     void reverse(Node* &head){
     Node* prev = NULL;
